@@ -21,7 +21,7 @@ ClassicEditor
 		plugins: [ ..., InsertDynamicText],
 		toolbar: [ ..., 'InsertDynamicText'],
 		dynamicTextOptions: {
-            labels: ['app_name', 'app_url', 'user_email', 'password_link'],
-        },
+                	labels: ['app_name', 'app_url', 'user_email', 'password_link'],
+        	},
 	})
 ```
