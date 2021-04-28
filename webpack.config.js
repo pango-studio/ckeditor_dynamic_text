@@ -7,7 +7,7 @@ const { styles } = require( '@ckeditor/ckeditor5-dev-utils' );
 
 module.exports = {
     // https://webpack.js.org/configuration/entry-context/
-    entry: './app.js',
+    entry: './samples/app.js',
 
     // https://webpack.js.org/configuration/output/
     output: {
@@ -18,7 +18,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /ckeditor5-[^/\\]+[/\\]theme[/\\]icons[/\\][^/\\]+\.svg$/,
+				test: /\.svg$/,
 
                 use: [ 'raw-loader' ]
             },
