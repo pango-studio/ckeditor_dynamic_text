@@ -1,20 +1,29 @@
 {
-  "name": "ckeditor_dynamic_text_tool",
-  "version": "1.0.0",
-  "description": "A CK Editor 5 plugin which adds a button allowing users to insert templates which get replaced with data",
-  "main": "app.js",
-  "scripts": {
-    "build": "webpack --mode development",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Advantage Learn",
-  "license": "MIT",
-  "dependencies": {
-    "@ckeditor/ckeditor5-basic-styles": "^27.1.0",
-    "@ckeditor/ckeditor5-dev-utils": "^24.4.2",
-    "@ckeditor/ckeditor5-editor-classic": "^27.1.0",
-    "@ckeditor/ckeditor5-essentials": "^27.1.0",
-    "@ckeditor/ckeditor5-paragraph": "^27.1.0",
-    "@ckeditor/ckeditor5-theme-lark": "^27.1.0"
-  }
+	"name": "@advantagelearn/ckeditor_dynamic_text",
+	"version": "1.0.0",
+	"description": "A CK Editor 5 plugin which adds a button allowing users to insert labels for content to be replaced with dynamic text",
+	"main": "app.js",
+	"scripts": {
+		"build": "webpack --mode development",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "Advantage Learn",
+	"license": "MIT",
+	"files": [
+		"src"
+	],
+	"dependencies": {
+		"@ckeditor/ckeditor5-basic-styles": "^27.1.0",
+		"@ckeditor/ckeditor5-core": "^27.1.0",
+		"@ckeditor/ckeditor5-dev-utils": "^24.4.2",
+		"@ckeditor/ckeditor5-editor-classic": "^27.1.0",
+		"@ckeditor/ckeditor5-essentials": "^27.1.0",
+		"@ckeditor/ckeditor5-paragraph": "^27.1.0",
+		"@ckeditor/ckeditor5-theme-lark": "^27.1.0",
+		"@ckeditor/ckeditor5-ui": "^27.1.0"
+	},
+	"devDependencies": {
+		"webpack": "^5.36.0",
+		"webpack-cli": "^4.6.0"
+	}
 }
