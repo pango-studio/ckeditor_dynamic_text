@@ -13,7 +13,7 @@ npm install @pango-studio/ckeditor_dynamic_text
 
 2. Add the plugin and configuration to your CK editor instance
 ```js
-import InsertDynamicText from '@pango-studio/ckeditor_dynamic_text/src/wproofreader';
+import InsertDynamicText from '@pango-studio/ckeditor_dynamic_text/src/InsertDynamicText';
 ...
 
 ClassicEditor
