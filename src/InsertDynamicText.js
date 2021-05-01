@@ -14,6 +14,14 @@ export default class InsertDynamicText extends Plugin {
 	init() {
 		const editor = this.editor
 
+		// Get the dynamic text labels available for this instance of the editor
+		const labels = editor.config.get('dynamicTextOptions.labels')
+
+		// If there are no labels, don't add the dropdown view
+		if (!labels) {
+			return
+		}
+
 		editor.ui.componentFactory.add('insertDynamicText', (locale) => {
 			const dropdownView = createDropdown(locale, SplitButtonView)
 
@@ -25,8 +33,8 @@ export default class InsertDynamicText extends Plugin {
 			})
 
 			const dynamicTextItems = new Collection()
-			const labels = editor.config.get('dynamicTextOptions.labels')
 
+			// For each label, add an option in the dropdown list
 			labels.forEach((label) => {
 				dynamicTextItems.add({
 					type: 'button',
@@ -39,6 +47,7 @@ export default class InsertDynamicText extends Plugin {
 
 			addListToDropdown(dropdownView, dynamicTextItems)
 
+			// Add the selected tag at the current insertion point
 			dropdownView.on('execute', (eventInfo) => {
 				const { label } = eventInfo.source
 
