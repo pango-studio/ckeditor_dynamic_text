@@ -32,7 +32,7 @@ export default class InsertDynamicText extends Plugin {
 					type: 'button',
 					model: new Model({
 						withText: true,
-						label: `{{ ${label} }}`,
+						label: `{{${label}}}`,
 					}),
 				})
 			})
