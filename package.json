@@ -1,6 +1,6 @@
 {
 	"name": "@pango-studio/ckeditor_dynamic_text",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"description": "A CK Editor 5 plugin which adds a button allowing users to insert labels for content to be replaced with dynamic text",
 	"main": "app.js",
 	"scripts": {
