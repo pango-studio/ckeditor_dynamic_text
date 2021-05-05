@@ -16,6 +16,8 @@ export default class InsertDynamicText extends Plugin {
 
 		// Get the dynamic text labels available for this instance of the editor
 		const labels = editor.config.get('dynamicTextOptions.labels')
+		// Get the syntax of the labels
+		const syntax = editor.config.get('dynamicTextOptions.syntax')
 
 		// If there are no labels, don't add the dropdown view
 		if (!labels) {
@@ -40,7 +42,10 @@ export default class InsertDynamicText extends Plugin {
 					type: 'button',
 					model: new Model({
 						withText: true,
-						label: `{{${label}}}`,
+						label:
+							syntax === 'mailchimp'
+								? `*|${label}|*`
+								: `{{${label}}}`,
 					}),
 				})
 			})
